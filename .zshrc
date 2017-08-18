@@ -16,7 +16,7 @@ setopt hist_reduce_blanks
 setopt hist_no_store
 
 #Prompt
-PROMPT="[%F{green}%n%f in %F{yellow}%2d%f]: "
+PROMPT="[%f%F{red}%n%f in %F{red}%2d%f]: "
 
 #Globing
 setopt extended_glob
@@ -45,14 +45,9 @@ alias du="du -h --max-depth=1 | sort -h"
 alias ping="grc --colour=auto ping -c5"
 alias psaux="grc --colour=auto ps aux"
 alias grep="grep --color=auto"
-alias py="python"
+alias python="python3"
+alias py="python3"
 alias ipy="ipython"
-alias pytest="python -m unittest"
-alias lpr="lpr -P MFC7860DWR"
-alias mountusb="sudo mount -o gid=users,fmask=113,dmask=002"
-alias feh="feh -. --auto-rotate -B black"
-alias trrm="transmission-remote-cli"
-alias chromium-proxy="chromium --proxy-pac-url=https://antizapret.prostovpn.org/proxy.pac"
 
 
 #Highlighting
