@@ -31,33 +31,19 @@ zstyle ':completion:*' menu select
 bindkey -v
 bindkey '^[[3~' delete-char
 
-#Calculator
-autoload -U zcalc
-
 #Enviroment variables
 export EDITOR="vim"
 
 #Aliases
 alias ls="ls -l -N --color=auto --group-directories-first"
 alias lsa="ls -la -N --color=auto --group-directories-first"
-alias df="df -h"
-alias du="du -h --max-depth=1 | sort -h"
-alias ping="grc --colour=auto ping -c5"
-alias psaux="grc --colour=auto ps aux"
-alias grep="grep --color=auto"
 alias py="python"
-alias ipy="ipython"
-alias pytest="python -m unittest"
-alias lpr="lpr -P MFC7860DWR"
-alias mountusb="sudo mount -o gid=users,fmask=113,dmask=002"
-alias feh="feh -. --auto-rotate -B black"
-alias trrm="transmission-remote-cli"
-alias chromium-proxy="chromium --proxy-pac-url=https://antizapret.prostovpn.org/proxy.pac"
+alias dc="docker-compose"
 
-
-#Highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-ZSH_HIGHLIGHT_STYLES[path]='fg=yellow,bold'
-ZSH_HIGHLIGHT_STYLES[path_prefix]='none' #Disable underlining paths
-ZSH_HIGHLIGHT_STYLES[path_prefix_pathseparator]='none' #Disable underlining path separators
-
+#Powerline
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time)
+powerline-daemon -q
+. /usr/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
+POWERLEVEL9K_MODE='nerdfont-complete'
+source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
